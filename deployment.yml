@@ -1,0 +1,6 @@
+# deployment.yaml
+replicas: 2
+containers:
+  - name: my-app
+    image: yourhub/your-app:latest
+    ports: [{ containerPort: 3000 }]
