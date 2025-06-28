@@ -1,9 +1,9 @@
 pipeline {
   agent any
   environment {
-    IMAGE = "https://github.com/pavani84-hub/my-app:latest"
+    IMAGE = "pavani84/my-app:latest"
     KUBECONFIG_CRED = 'kubeconfig-credentials'
-    DOCKERHUB_CRED = 'dockerhub-credentials'
+    DOCKERHUB_CRED   = 'dockerhub-credentials'
   }
   stages {
     stage('Checkout') {
@@ -33,7 +33,7 @@ pipeline {
     }
   }
   post {
-    success { echo 'Deployment to Kubernetes successful!' }
-    failure { echo 'Pipeline failed — check logs.' }
+    success { echo '✅ Deployment to Kubernetes successful!' }
+    failure { echo '❌ Pipeline failed — check logs.' }
   }
 }
