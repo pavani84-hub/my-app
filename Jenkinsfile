@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     IMAGE = "https://github.com/pavani84-hub/my-app:latest"
-    KUBECONFIG_CRED = 'kubeconfig-id'
+    KUBECONFIG_CRED = 'kubeconfig-credentials'
     DOCKERHUB_CRED = 'dockerhub-credentials'
   }
   stages {
