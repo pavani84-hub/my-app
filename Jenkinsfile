@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    IMAGE = "pavani84/my-app:latest"
+    IMAGE = "pavaniambica/my-app:latest"
     KUBECONFIG_CRED = 'kubeconfig-credentials'
     DOCKERHUB_CRED   = 'dockerhub-credentials'
   }
